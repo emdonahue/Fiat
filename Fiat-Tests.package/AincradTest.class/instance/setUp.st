@@ -1,0 +1,3 @@
+initialization
+setUp
+	world := Aincrad new state: #(#(room room1 player1) #(room room1 sword1) (exit room1 room2) (exit room2 room1)) asConsTree

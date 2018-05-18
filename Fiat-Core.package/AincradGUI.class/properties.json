@@ -1,0 +1,15 @@
+{
+	"commentStamp" : "",
+	"super" : "ComposableModel",
+	"category" : "Fiat-Core",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"chatArea",
+		"inputArea",
+		"world"
+	],
+	"name" : "AincradGUI",
+	"type" : "normal"
+}
