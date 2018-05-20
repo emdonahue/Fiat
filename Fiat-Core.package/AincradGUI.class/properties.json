@@ -8,7 +8,8 @@
 	"instvars" : [
 		"chatArea",
 		"inputArea",
-		"world"
+		"world",
+		"ai"
 	],
 	"name" : "AincradGUI",
 	"type" : "normal"
