@@ -1,15 +1,14 @@
 {
 	"commentStamp" : "",
-	"super" : "ComposableModel",
+	"super" : "Object",
 	"category" : "Fiat-Core",
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [
-		"chatArea",
-		"inputArea",
+		"actions",
 		"world"
 	],
-	"name" : "AincradGUI",
+	"name" : "FIAWorldDelta",
 	"type" : "normal"
 }

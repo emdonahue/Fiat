@@ -1,8 +1,10 @@
 as yet unclassified
 handleInput
 	| text |
-	text := (self inputArea text trimBoth findTokens: ' ') collect: #asSymbol.
+	text :=( (self inputArea text trimBoth findTokens: ' ') collect: #asSymbol) asArray.
 	text size > 0
-		ifTrue: [ world := world act: (text copyWithFirst: #player1).
-			self addResponse: world state asString.
+		ifTrue: [ | delta |
+			delta := world act: (text copyWithFirst: #player1).
+			world := delta world.
+			self addResponse: delta actions asString.
 			self inputArea text: '' ]
