@@ -1,4 +1,5 @@
 initialization
 initialize
 	super initialize.
-	goal := Cons empty cons: Cons empty.
+	self clearGoal.
+	name := #yui

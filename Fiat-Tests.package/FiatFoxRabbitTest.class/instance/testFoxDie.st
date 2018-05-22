@@ -1,3 +1,3 @@
 initialization
 testFoxDie
-	self assert: (world act: #foxdie) state equals: #((fox hungry) rabbit rabbit) asConsTree
+	self assert: (world act: #foxdie) world state equals: #(#(fox hungry) rabbit rabbit) asConsTree
