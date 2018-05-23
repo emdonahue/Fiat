@@ -1,6 +1,6 @@
 as yet unclassified
 rule: aRule remove: dList add: aList
-	| a get drop move b c plus minus |
+	| a get drop move b c  |
 	a := SKVar new.
 	b := SKVar new.
 	c := SKVar new.
@@ -10,6 +10,5 @@ rule: aRule remove: dList add: aList
 		& (aList === ((#room cons: c cons: a cons) cons: (#room cons: c cons: b cons) cons)).
 	move := aRule === (a cons: #move cons: b cons) & (dList === ((#room cons: c cons: a cons) cons: (#exit cons: c cons: b cons) cons))
 		& (aList === ((#exit cons: c cons: b cons) cons: (#room cons: b cons: a cons) cons)).
-	plus := aRule === (#player1 cons: #+ cons: b) & dList isEmptyo & (aList === b cons).
-	minus := aRule === (#player1 cons: #- cons: b) & aList isEmptyo & (dList === b cons).
-	^ get | drop | move | plus | minus
+	
+	^ get | drop | move
