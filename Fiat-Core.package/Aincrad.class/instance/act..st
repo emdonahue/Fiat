@@ -11,9 +11,12 @@ act: anAction
 			^ FIAWorldDelta new
 				world: self;
 				actions: anAction ].
-			(anAction ) = #(player1 untell)
-		ifTrue: [ 
-			^ FIAWorldDelta new
+	(anAction copyFrom: 1 to: 2) = #(player1 ask)
+		ifTrue: [ ^ FIAWorldDelta new
+				world: self;
+				actions: (ai ask: (anAction copyFrom: 3 to: anAction size) in: self)  ].
+	anAction = #(player1 untell)
+		ifTrue: [ ^ FIAWorldDelta new
 				world: (self copy ai: ai copy clearGoal);
 				actions: anAction ].
 	^ super act: anAction
