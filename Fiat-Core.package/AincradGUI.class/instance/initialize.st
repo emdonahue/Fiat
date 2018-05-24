@@ -3,4 +3,4 @@ initialize
 
 	super initialize.
 	history := OrderedCollection new.
-	historyIdx := 1
+	historyIdx := 0
