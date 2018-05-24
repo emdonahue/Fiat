@@ -25,5 +25,5 @@ adminAct: anAction
 				actions: 'What you expected, hasnt happened' ]
 		ifNotEmpty: [ :suc | 
 			FIAWorldDelta new
-				world: (self class new state: suc first first);
+				world: (self copy state: suc first first);
 				actions: anAction ]
