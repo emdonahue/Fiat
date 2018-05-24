@@ -1,7 +1,9 @@
 api
 historyUp
-	historyIdx = 0
+	historyIdx = 1
 		ifTrue: [ ^ self ].
-	inputArea text: (history at: historyIdx).
+	historyIdx = (history size + 1) 
+		ifTrue:  [ self cmdCache: self inputArea pendingText ].
 	historyIdx := historyIdx - 1.
+	inputArea text: (history at: historyIdx).
 	inputArea hasUnacceptedEdits: true

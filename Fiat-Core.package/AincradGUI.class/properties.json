@@ -10,7 +10,8 @@
 		"inputArea",
 		"world",
 		"history",
-		"historyIdx"
+		"historyIdx",
+		"cmdCache"
 	],
 	"name" : "AincradGUI",
 	"type" : "normal"

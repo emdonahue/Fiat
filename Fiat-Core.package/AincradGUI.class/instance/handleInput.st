@@ -5,7 +5,8 @@ handleInput
 	text size > 0
 		ifTrue: [ | delta |
 			history addLast: (' ' join: text ).
-			historyIdx := history size.
+			historyIdx := history size + 1. "New input is always beyond history."
+			cmdCache := ''.
 			delta := world adminAct: (text copyWithFirst: #player1).
 			world := delta world.
 			self addResponse: delta actions asString.
