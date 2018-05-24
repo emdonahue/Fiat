@@ -8,7 +8,9 @@
 	"instvars" : [
 		"chatArea",
 		"inputArea",
-		"world"
+		"world",
+		"history",
+		"historyIdx"
 	],
 	"name" : "AincradGUI",
 	"type" : "normal"

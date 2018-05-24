@@ -1,4 +1,6 @@
 initialization
 initialize
+
 	super initialize.
-	loginid := #player1
+	history := OrderedCollection new.
+	historyIdx := 0
