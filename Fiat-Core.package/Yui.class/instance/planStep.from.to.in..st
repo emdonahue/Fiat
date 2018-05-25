@@ -1,4 +1,3 @@
-as yet unclassified
+planning
 planStep: step from: startS to: endS in: aWorld
-
-^ (aWorld step: (name cons: step) from: startS to: endS)
+	^ aWorld act: (name cons: step) from: startS to: endS

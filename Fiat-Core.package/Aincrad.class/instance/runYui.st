@@ -7,7 +7,7 @@ runYui
 
 	^ (ai plan: self)
 		ifEmpty: [ ai clearGoal.
-			FIAWorldDelta new
+			FIAUpdate new
 				world: self;
 				actions: 'yui waits' ]
 		ifNotEmpty: [ :mixedPlan | 
@@ -16,7 +16,7 @@ runYui
 				ifEmpty: [ ai clearGoal.
 					mixedPlan ]
 				ifNotEmpty: [ :sayPlan | (mixedPlan takeWhile: [ :sw | sw car cdr car ~= #say ]) append: sayPlan first cons ].
-			FIAWorldDelta new
+			FIAUpdate new
 				world:
 					(self copy
 						state: ((plan takeWhile: [ :sw | sw car cdr car ~= #say ]) ifEmpty: state ifNotEmpty: [ :states |  states last cdr]);

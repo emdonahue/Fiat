@@ -1,3 +1,3 @@
 accessing
 actions: anObject
-	actions := anObject
+	message := anObject

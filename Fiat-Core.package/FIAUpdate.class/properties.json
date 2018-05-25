@@ -6,8 +6,9 @@
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [
-		"state"
+		"world",
+		"message"
 	],
-	"name" : "FIAWorld",
+	"name" : "FIAUpdate",
 	"type" : "normal"
 }

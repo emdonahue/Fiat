@@ -1,10 +1,10 @@
 accessing structure variables
 act: anAction
 	^ [ :nxt | self step: anAction from: state to: nxt ] asGoal run
-		ifEmpty: [ FIAWorldDelta new
+		ifEmpty: [ FIAUpdate new
 				world: self;
 				actions: 'What you expected, hasnt happened' ]
 		ifNotEmpty: [ :suc | 
-			FIAWorldDelta new
+			FIAUpdate new
 				world: (self copy state: suc first first);
 				actions: anAction ]

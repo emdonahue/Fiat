@@ -1,11 +1,13 @@
 {
 	"commentStamp" : "",
-	"super" : "FIAWorld",
+	"super" : "Object",
 	"category" : "Fiat-Tests",
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],
-	"instvars" : [ ],
+	"instvars" : [
+		"state"
+	],
 	"name" : "FIAFoxRabbitWorld",
 	"type" : "normal"
 }

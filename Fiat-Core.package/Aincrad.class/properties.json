@@ -1,12 +1,14 @@
 {
 	"commentStamp" : "",
-	"super" : "FIAWorld",
+	"super" : "Object",
 	"category" : "Fiat-Core",
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [
-		"ai"
+		"state",
+		"ai",
+		"rules"
 	],
 	"name" : "Aincrad",
 	"type" : "normal"

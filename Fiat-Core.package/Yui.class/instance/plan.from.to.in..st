@@ -1,4 +1,4 @@
-as yet unclassified
+planning
 plan: aPlan from: startS to: endS in: aWorld
 	| done planning |
 	done := startS === endS & aPlan isEmptyo.
