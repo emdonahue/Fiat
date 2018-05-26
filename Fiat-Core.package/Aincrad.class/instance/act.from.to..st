@@ -1,3 +1,6 @@
-acting
+rules
 act: anAction from: startS to: endS
-	^ self act: anAction from: startS to: endS rules: rules
+
+	^ (self get: anAction from: startS to: endS)
+		| (self drop: anAction from: startS to: endS)
+		| (self move: anAction from: startS to: endS)

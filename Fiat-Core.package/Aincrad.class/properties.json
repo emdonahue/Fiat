@@ -7,8 +7,7 @@
 	"classvars" : [ ],
 	"instvars" : [
 		"state",
-		"ai",
-		"rules"
+		"ai"
 	],
 	"name" : "Aincrad",
 	"type" : "normal"

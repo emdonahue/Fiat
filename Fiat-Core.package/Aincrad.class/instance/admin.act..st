@@ -1,7 +1,7 @@
 acting
 admin: anAdmin act: anAction
 	anAction = #(wait)
-		ifTrue: [ ^ self runYui ].
+		ifTrue: [ ^ self runAI ].
 	anAction = #(look)
 		ifTrue: [ ^ self update: state ].
 	anAction first = #tell

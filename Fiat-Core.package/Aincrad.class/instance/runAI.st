@@ -1,9 +1,6 @@
-accessing structure variables
-runYui
-	"isNotWaitAction := [ :sw | sw car cdr car ~= #say ].
-	mixedPlan := ((ai plan: self) dropWhile: isNotWaitAction)
-	ifEmpty: [  ]
-	takeWhile: [ :sw | sw car cdr car ~= #say ])"
+ai
+runAI
+
 
 	^ (ai plan: self)
 		ifEmpty: [ ai clearGoal.
@@ -19,6 +16,6 @@ runYui
 			FIAUpdate new
 				world:
 					(self copy
-						state: ((plan takeWhile: [ :sw | sw car cdr car ~= #say ]) ifEmpty: state ifNotEmpty: [ :states |  states last cdr]);
+						state: ((plan takeWhile: [ :sw | sw car cdr car ~= #say ]) ifEmpty: state ifNotEmpty: [ :states | states last cdr ]);
 						ai: ai copy);
 				actions: (plan collect: [ :a | a car ]) force ]

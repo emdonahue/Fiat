@@ -13,7 +13,7 @@ plan: aPlan from: startS to: endS in: aWorld
 								planStep: a
 								from: startS
 								to: st
-								in: aWorld) | (self askStep: a from: startS to: st in: aWorld))
+								in: aWorld) | (self sayStep: a from: startS to: st in: aWorld))
 								&
 									(self
 										plan: plan

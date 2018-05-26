@@ -1,3 +1,3 @@
-as yet unclassified
+goal
 clearGoal
 	goal := Cons empty cons: Cons empty.

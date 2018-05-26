@@ -5,8 +5,8 @@ testYuiTake
 		admin: #player1
 		act: #(get sword1)) world.
 	s ai addGoal: #(inventory yui sword1).
-	w := s runYui.
+	w := s runAI.
 	self assert: w actions equals: #(#(yui say drop sword1)) asConsTree.
 	swordDroppedW := w world admin: #player1 act: #(drop sword1).
-	yuiHasSwordW := swordDroppedW world runYui.
+	yuiHasSwordW := swordDroppedW world runAI.
 	self assert: yuiHasSwordW world ai goal equals: Cons empty cons
