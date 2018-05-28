@@ -9,15 +9,8 @@ plan: aPlan from: startS to: endS in: aWorld
 					act
 						car: name
 						cdrIn: [ :a | 
-							((self
-								planStep: a
-								from: startS
-								to: st
-								in: aWorld) | (self sayStep: a from: startS to: st in: aWorld))
-								&
-									(self
-										plan: plan
-										from: st
-										to: endS
-										in: aWorld) ] ] ].
+							(self planStep: a from: startS to: st in: aWorld)
+								| (self sayStep: a from: startS to: st in: aWorld)
+								& ( self avoid: st in: plan )
+								& (self plan: plan from: st to: endS in: aWorld) ] ] ].
 	^ done | planning
