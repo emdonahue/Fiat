@@ -8,5 +8,6 @@ plan: aWorld
 	objective := goal car
 		inject: SKGoal succeed
 		into: [ :s :g | s & (endS membero: g) ].
-	^ [ :plan | objective & (self plan: plan from: aWorld state to: endS in: aWorld)  ]
+	^ [ :plan | 
+	objective & (self plan: plan from: aWorld state to: endS in: aWorld) ]
 		asGoal run ifNotEmpty: [ :plans | plans car car ]
