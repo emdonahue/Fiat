@@ -1,3 +1,3 @@
 goal
 clearGoal
-	goal := Cons empty cons: Cons empty.
+	goal := Cons empty cons
