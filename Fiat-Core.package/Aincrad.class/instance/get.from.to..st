@@ -1,9 +1,9 @@
 rules
 get: aRule from: startS to: endS
 	| a b c |
-	a := SKVar new.
-	b := SKVar new.
-	c := SKVar new.
+	a := SKTaggedVar tag: #gtNNP.
+	b := SKTaggedVar tag: #gtNN.
+	c := SKTaggedVar tag: #gtIN.
 	^ (a cons: #get cons: b cons) === aRule
 		&
 			(self

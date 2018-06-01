@@ -9,9 +9,5 @@ plan: aWorld
 	"endS := SKVar tag: #endS."
 
 	<todo>
-	^ ([ :plan :endS | 
-	(endS subseto: goal car )
-		& (self plan: plan from: aWorld state to: endS in: aWorld) ] asGoal
-		run
-)
-		ifNotEmpty: [ :plans | plans car car ]
+	^ (self makePlan: aWorld)
+		run ifNotEmpty: [ :plans | plans car car ]
