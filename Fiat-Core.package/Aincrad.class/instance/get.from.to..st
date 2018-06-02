@@ -1,11 +1,11 @@
 rules
 get: aRule from: startS to: endS
 	| a b c |
-	a := SKTaggedVar tag: #gtNNP.
-	b := SKTaggedVar tag: #gtNN.
-	c := SKTaggedVar tag: #gtIN.
-	^ (a cons: #get cons: b cons) === aRule &
-		(b =/= #player1 & (b =/= #yui) )
+	a := SKTaggedVar tag: #gtWho.
+	b := SKTaggedVar tag: #gtWhat.
+	c := SKTaggedVar tag: #gtWhere.
+	^ (a cons: #get cons: b cons) === aRule
+		& (b =/= #player1 & (b =/= #yui))
 		&
 			(self
 				from: startS

@@ -1,9 +1,9 @@
 rules
 drop: anAction from: startS to: endS
 	| a b c |
-	a := SKTaggedVar tag: #dpNNP.
-	b := SKTaggedVar tag: #dpNN.
-	c := SKTaggedVar tag: #dpIN.
+	a := SKTaggedVar tag: #dpWho.
+	b := SKTaggedVar tag: #dpWhat.
+	c := SKTaggedVar tag: #dpWhere.
 	^ (a cons: #drop cons: b cons) === anAction
 		&
 			(self

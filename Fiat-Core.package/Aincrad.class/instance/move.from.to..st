@@ -1,9 +1,9 @@
 rules
 move: anAction from: startS to: endS
 	| a b c |
-	a := SKTaggedVar tag: #mvNNP.
-	b := SKTaggedVar tag: #mvNN.
-	c := SKTaggedVar tag: #mvIN.
+	a := SKTaggedVar tag: #mvWho.
+	b := SKTaggedVar tag: #mvTo.
+	c := SKTaggedVar tag: #mvFrom.
 	^ (a cons: #move cons: b cons) === anAction
 		&
 			(self
