@@ -1,4 +1,4 @@
-planning
+planning-impossible
 testPlanImpossible
 	self skip.
 	yui goal: ((#inventory cons: #yui cons: #nonexistentobject cons) cons cons: Cons empty).
