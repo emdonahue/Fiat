@@ -4,16 +4,11 @@ goalFromUtterance: anUtterance in: aWorld
 	utt := anUtterance asConsTree.
 	a := SKVar new.
 	anUtterance first = #get
-		ifTrue: [ ^ (#inventory cons: name cons: anUtterance second cons) cons
-				cons: Cons empty ].
+		ifTrue: [ ^ (#inventory cons: name cons: anUtterance second cons) cons cons: Cons empty ].
 	anUtterance first = #go
-		ifTrue: [ ^ (#room cons: anUtterance second cons: name cons) cons
-				cons: Cons empty ].
+		ifTrue: [ ^ (#room cons: anUtterance second cons: name cons) cons cons: Cons empty ].
 	anUtterance = #(nevermind)
 		ifTrue: [ ^ Cons empty cons: Cons empty ].
-	^ [ :g | 
-	(self sayCome: utt goal: g in: aWorld)
-		| (self sayBring: utt goal: g in: aWorld)
-		| (self sayDrop: utt goal: g in: aWorld) ] asGoal run
+	^ [ :g | self say: utt goal: g in: aWorld ] asGoal run
 		ifEmpty: [ goal ]
 		ifNotEmpty: [ :gs | gs car car ]
