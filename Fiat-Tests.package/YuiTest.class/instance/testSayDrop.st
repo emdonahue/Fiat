@@ -1,4 +1,4 @@
-speaking
+listening
 testSayDrop
 	| w |
 	self assert: (yui goalFromUtterance: #(drop sword1) in: world) equals: Cons empty cons.

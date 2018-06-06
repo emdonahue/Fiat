@@ -9,5 +9,4 @@ plan: aWorld
 	"endS := SKVar tag: #endS."
 
 	<todo>
-	^ (self makePlan: aWorld)
-		run ifNotEmpty: [ :plans | plans car car ]
+	^ (self makePlan: aWorld actor: name goals: goal car) run ifNotEmpty: [ :plans | plans car car ]
