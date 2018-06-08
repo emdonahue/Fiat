@@ -19,9 +19,17 @@ say: anUtterance speaker: theSpeaker addressee: theAddressee goal: aGoal in: aWo
 				speaker: theSpeaker
 				addressee: theAddressee
 				goal: aGoal
-				in: aWorld) | (self
+				in: aWorld)
+		|
+			(self
 				sayGo: anUtterance
 				speaker: theSpeaker
 				addressee: theAddressee
 				goal: aGoal
-				in: aWorld)
+				in: aWorld) 
+				| (self
+				sayGet: anUtterance
+				speaker: theSpeaker
+				addressee: theAddressee
+				goal: aGoal
+				in: aWorld).

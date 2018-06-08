@@ -5,7 +5,7 @@ testGoGoal
 			[ :g | 
 			yui
 				say: (#go cons: #room2 cons)
-				speaker: #yui
+				speaker: #yui 
 				addressee: #player1
 				goal: g
 				in: world ] asGoal run first car

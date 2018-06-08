@@ -1,8 +1,9 @@
 subplanning
 speechAct: aPlan speaker: theSpeaker addressee: theAddressee from: startS to: endS restOfPlan: restOfPlan visited: visitedStates in: aWorld
-	| g end |
+	| g subEndS subrest |
+	subrest := SKVar tag: #subRestPlan.
+	subEndS := SKVar tag: #subEndS.
 	g := SKVar tag: #speechGoal.
-	end := SKVar tag: #speechEndS.
 	^ aPlan
 		carCdrIn: [ :step :rest | 
 			step
@@ -17,16 +18,24 @@ speechAct: aPlan speaker: theSpeaker addressee: theAddressee from: startS to: en
 										speaker: theSpeaker
 										addressee: theAddressee
 										goal: g
-										in: aWorld)
-										&
-										(g carCdrIn: [:a :b | end subseto: a])
+										in: aWorld) & (g carCdrIn: [ :a :b | (startS nsubseto: a) & (subEndS subseto: a) ])
 										&
 											(self
 												subplan: rest
 												actor: theAddressee
 												goal: g
 												from: startS
-												to: end
+												to: subEndS
+												visited: visitedStates
+												restOfPlan: subrest
+												in: aWorld)
+										&
+											(self
+												subplan: subrest
+												actor: theSpeaker
+												goal: nil
+												from: subEndS
+												to: endS
 												visited: visitedStates
 												restOfPlan: restOfPlan
-												in: aWorld) ]) ] ]
+												in: aWorld) ]) ] ].

@@ -6,15 +6,17 @@ subplan: aPlan actor: anActor goal: aGoal from: startS to: endS visited: visited
 	| done acting addressee speak |
 	addressee := SKVar tag: #addressee.
 	done := startS === endS & (aPlan === restOfPlan).
-	speak := (self speaker: anActor addressee: addressee) & (self
-		speechAct: aPlan
-		speaker: anActor
-		addressee: addressee
-		from: startS
-		to: endS
-		restOfPlan: restOfPlan
-		visited: visitedStates
-		in: aWorld).
+	speak := (self speaker: anActor addressee: addressee)
+		&
+			(self
+				speechAct: aPlan
+				speaker: anActor
+				addressee: addressee
+				from: startS
+				to: endS
+				restOfPlan: restOfPlan
+				visited: visitedStates
+				in: aWorld).
 	acting := aPlan
 		carCdrIn: [ :step :plan | 
 			step
@@ -30,5 +32,12 @@ subplan: aPlan actor: anActor goal: aGoal from: startS to: endS visited: visited
 								to: endS
 								visited: (visitedStates add: st)
 								restOfPlan: restOfPlan
-								in: aWorld) & (visitedStates nembero: st) & (self planStep: a from: startS to: st in: aWorld) ] ] ].
-	^ done | acting | speak
+								in: aWorld) & (visitedStates nembero: st)
+								&
+									(self
+										subplanStep: a
+										actor: anActor
+										from: startS
+										to: st
+										in: aWorld) ] ] ].
+	^ done |  (acting | speak).
