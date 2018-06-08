@@ -1,5 +1,5 @@
-subplanning
-speechAct: aPlan speaker: theSpeaker addressee: theAddressee from: startS to: endS restOfPlan: restOfPlan visited: visitedStates in: aWorld
+planning
+planSpeechAct: aPlan speaker: theSpeaker addressee: theAddressee from: startS to: endS restOfPlan: restOfPlan visited: visitedStates in: aWorld
 	| g subEndS subrest |
 	subrest := SKVar tag: #subRestPlan.
 	subEndS := SKVar tag: #subEndS.
@@ -10,8 +10,11 @@ speechAct: aPlan speaker: theSpeaker addressee: theAddressee from: startS to: en
 				carCdrIn: [ :act :state | 
 					state === startS
 						&
+						
 							(act
-								car: #say
+								car: theSpeaker 
+								cdrIn: [ :speechAct |
+								speechAct car: #say
 								cdrIn: [ :utterance | 
 									(self
 										say: utterance
@@ -38,4 +41,4 @@ speechAct: aPlan speaker: theSpeaker addressee: theAddressee from: startS to: en
 												to: endS
 												visited: visitedStates
 												restOfPlan: restOfPlan
-												in: aWorld) ]) ] ].
+												in: aWorld) ] ]) ] ] .

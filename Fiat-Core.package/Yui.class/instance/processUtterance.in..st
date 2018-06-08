@@ -1,4 +1,4 @@
-speech
+commands
 processUtterance: anUtterance in: aWorld
 
 		^ self copy

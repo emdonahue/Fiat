@@ -1,4 +1,4 @@
-speech
+commands
 sayGet: anUtt speaker: theSpeaker addressee: theAddressee goal: aGoal in: aWorld
 	| a |
 	a := SKVar new.

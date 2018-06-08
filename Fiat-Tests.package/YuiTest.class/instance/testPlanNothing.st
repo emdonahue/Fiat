@@ -1,3 +1,3 @@
 planning
 testPlanNothing
-	self assert: (yui makesubplan: world) run equals: Cons empty .
+	self assert: (yui makePlan: world) run equals: Cons empty .

@@ -1,5 +1,5 @@
-subplanning
-makesubplan: aWorld
+planning
+makePlan: aWorld
 	| endS |
 	endS := SKVar tag: #endS.
 	^ [ :plan | 

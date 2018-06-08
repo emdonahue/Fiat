@@ -1,4 +1,4 @@
-speech
+commands
 goalFromUtterance: anUtterance in: aWorld
 	| utt a |
 	utt := anUtterance asConsTree.

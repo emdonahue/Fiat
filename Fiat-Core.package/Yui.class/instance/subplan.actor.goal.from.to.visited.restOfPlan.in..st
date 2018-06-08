@@ -1,4 +1,4 @@
-subplanning
+planning
 subplan: aPlan actor: anActor goal: aGoal from: startS to: endS visited: visitedStates restOfPlan: restOfPlan in: aWorld
 	"do we need to check that were not done befor econtinuing to plan?"
 
@@ -9,7 +9,7 @@ subplan: aPlan actor: anActor goal: aGoal from: startS to: endS visited: visited
 	speak := (self speaker: anActor addressee: addressee)
 		&
 			(self
-				speechAct: aPlan
+				planSpeechAct: aPlan
 				speaker: anActor
 				addressee: addressee
 				from: startS
@@ -35,7 +35,7 @@ subplan: aPlan actor: anActor goal: aGoal from: startS to: endS visited: visited
 								in: aWorld) & (visitedStates nembero: st)
 								&
 									(self
-										subplanStep: a
+										planAct: a
 										actor: anActor
 										from: startS
 										to: st

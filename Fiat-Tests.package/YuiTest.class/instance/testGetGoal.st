@@ -10,4 +10,4 @@ testGetGoal
 		in: world ] asGoal run first car.
 	self assert: goal equals: #(#(#inventory yui sword1)) asConsTree cons.
 	yui goal: goal.
-	self assert: (yui subplan: world) car car equals: (#yui cons: #get cons: #sword1 cons).
+	self assert: (yui plan: world) car car equals: (#yui cons: #get cons: #sword1 cons).
