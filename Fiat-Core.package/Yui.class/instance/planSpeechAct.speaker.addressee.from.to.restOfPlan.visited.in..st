@@ -1,4 +1,4 @@
-planning
+planning-dep
 planSpeechAct: aPlan speaker: theSpeaker addressee: theAddressee from: startS to: endS restOfPlan: restOfPlan visited: visitedStates in: aWorld
 	| g subEndS subrest |
 	subrest := SKVar tag: #subRestPlan.
