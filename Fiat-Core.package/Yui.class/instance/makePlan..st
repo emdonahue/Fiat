@@ -7,7 +7,6 @@ makePlan: aWorld
 		&
 			(self
 				subplan: plan
-				plano: Cons empty
 				state:
 					(FIAPlannerState new
 						world: aWorld state;
