@@ -1,3 +1,3 @@
 primitive actions
 testPlanNothing
-	self assert: (yui makePlan: world) run equals: Cons empty .
+	self assert: (yui makePlan: world) run equals: Cons empty cons cons.

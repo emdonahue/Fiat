@@ -5,7 +5,7 @@ subplan: aPlan actor: anActor goal: aGoal from: startS to: endS visited: visited
 	<todo>
 	| done acting addressee speak |
 	addressee := SKVar tag: #addressee.
-	done := startS === endS & (aPlan === restOfPlan).
+	done := startS === endS & (aPlan === restOfPlan) "& (endS subseto: goal car)".
 	speak := (self speaker: anActor addressee: addressee)
 		&
 			(self
@@ -13,7 +13,7 @@ subplan: aPlan actor: anActor goal: aGoal from: startS to: endS visited: visited
 				speaker: anActor
 				addressee: addressee
 				from: startS
-				to: endS 
+				to: endS
 				restOfPlan: restOfPlan
 				visited: visitedStates
 				in: aWorld).

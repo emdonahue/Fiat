@@ -1,4 +1,4 @@
-speaking
+parsing
 testComeGoal
 	self
 		assert:

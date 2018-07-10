@@ -1,4 +1,4 @@
-speaking
+parsing
 testBringGoal
 	self
 		assert:
