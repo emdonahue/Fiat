@@ -1,21 +1,18 @@
 ai
 runAI
-
-
 	^ (ai plan: self)
 		ifEmpty: [ ai clearGoal.
 			FIAUpdate new
 				world: self;
-				actions: 'yui waits' ]
+				actions: 'Yui waits' ]
 		ifNotEmpty: [ :mixedPlan | 
 			| plan |
-			plan := (mixedPlan dropWhile: [ :sw | sw car cdr car ~= #say ])
-				ifEmpty: [ ai clearGoal.
+			plan := (mixedPlan dropWhile: [ :sw | sw car ~= #say ])
+				ifEmpty: [ "if no 'say' commands, use entire mixedPlan as plan."
+					ai clearGoal.
 					mixedPlan ]
-				ifNotEmpty: [ :sayPlan | (mixedPlan takeWhile: [ :sw | sw car cdr car ~= #say ]) append: sayPlan first cons ].
+				ifNotEmpty:
+					[ :sayPlan | "if say commands present, take all actions up to and including first say" (mixedPlan takeWhile: [ :sw | sw  car ~= #say ]) append: sayPlan first cons ].
 			FIAUpdate new
-				world:
-					(self copy
-						state: ((plan takeWhile: [ :sw | sw car cdr car ~= #say ]) ifEmpty: state ifNotEmpty: [ :states | states last cdr ]);
-						ai: ai copy);
-				actions: (plan collect: [ :a | a car ]) force ]
+				world: ((plan reject: [ :s | s car = #say ]) inject: self into: [ :world :action | world aiAct: action ]);
+				actions: (plan collect: [:a | ai name cons: a ]) force ].

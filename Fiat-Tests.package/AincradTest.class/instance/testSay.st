@@ -1,7 +1,6 @@
-speaking
+tests-yui
 testSay
 	| playerT aiT |
-	self skip.
 	playerT := world admin: #player1 act: #(say get sword1).
 	self assert: playerT world ai goal equals: #(#(inventory yui sword1)) asConsTree cons.
 	aiT := playerT world runAI.

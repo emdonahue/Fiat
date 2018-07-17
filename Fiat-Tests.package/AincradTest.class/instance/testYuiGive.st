@@ -1,7 +1,6 @@
-speaking
+tests-yui
 testYuiGive
 	| w gotSwordW yuiWaitingW |
-	self skip.
 	world ai addGoal: #(inventory player1 sword1).
 	w := world runAI.
 	self assert: w actions equals: #(#(yui say get sword1)) asConsTree.

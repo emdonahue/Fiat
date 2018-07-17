@@ -1,8 +1,6 @@
 tests-yui
 testYuiTake
-	
 	| w s swordDroppedW yuiHasSwordW |
-	self skip.
 	s := (world admin: #player1 act: #(get sword1)) world.
 	s ai addGoal: #(inventory yui sword1).
 	w := s runAI.
