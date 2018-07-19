@@ -4,8 +4,9 @@ subplan: aPlan actor: anActor goal: aGoal from: startS to: endS visited: visited
 
 	<todo>
 	| done acting addressee speak |
+	self deprecated: 'See planning protocol'.
 	addressee := SKVar tag: #addressee.
-	done := startS === endS & (aPlan === restOfPlan) "& (endS subseto: goal car)".
+	done := startS === endS & (aPlan === restOfPlan).	"& (endS subseto: goal car)"
 	speak := (self speaker: anActor addressee: addressee)
 		&
 			(self
