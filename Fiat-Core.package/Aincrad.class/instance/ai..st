@@ -1,3 +1,4 @@
 accessing
 ai: anObject
-	ai := anObject
+	ai := anObject.
+	
