@@ -1,13 +1,13 @@
 planning
 primitivePlan: planIn actor: anActor state: startState end: endState goal: endGoal rules: theRules
 	| block |
-	block := [ :actor  :endG :startS :plan :endS | 
+	block := [ :actor :endG :startS :plan :endS | 
 	| done acting nextS |
 	nextS := SKVar tag: #nextS.
 	done := plan === Cons empty & (startS subseto: endG) & (endS === startS).
 	acting := plan
 		carCdrIn: [ :step :rest | 
-			(self primitiveAct: step by: actor from: startS to: nextS rules: theRules)
+				(theRules act: (anActor cons: step) from: startS to: nextS)
 				& (self primitivePlan: rest actor: actor state: nextS end: endS goal: endG rules: theRules) ].
 	done | acting ].
 	^ false
@@ -16,7 +16,6 @@ primitivePlan: planIn actor: anActor state: startState end: endState goal: endGo
 					{anActor.
 					endGoal.
 					startState.
-					
 					planIn.
 					endState.} ]
 		ifFalse: [ block
@@ -24,8 +23,7 @@ primitivePlan: planIn actor: anActor state: startState end: endState goal: endGo
 				inputs:
 					{anActor.
 					endGoal.
-					startState.
-					}
+					startState.}
 				outputs:
 					{planIn.
 					endState.} ].

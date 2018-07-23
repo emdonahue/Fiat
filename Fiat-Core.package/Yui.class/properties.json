@@ -8,7 +8,8 @@
 	"instvars" : [
 		"goal",
 		"name",
-		"history"
+		"history",
+		"kb"
 	],
 	"name" : "Yui",
 	"type" : "normal"

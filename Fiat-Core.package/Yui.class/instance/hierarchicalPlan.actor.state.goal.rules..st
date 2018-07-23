@@ -4,12 +4,14 @@ hierarchicalPlan: planIn actor: anActor state: startState goal: endGoal rules: t
 	block := [ :actor :endG :startS :plan | 
 	| done acting nextS |
 	nextS := SKVar tag: #nextS.
-	done := plan === Cons empty & (startS subseto: endG).
-	acting := plan
-		carCdrIn: [ :step :rest | 
-			(self primitiveAct: step by: actor from: startS to: nextS rules: theRules) | (self speechAct: step by: actor from: startS to: nextS rules: theRules)
-				& (self hierarchicalPlan: rest actor: actor state: nextS goal: endG rules: theRules) ].
-	done	 | acting ].
+	startS
+		carCdrIn: [ :worldS :kbS | 
+			done := plan === Cons empty & (self state: startS satisfies: endG).
+			acting := plan
+				carCdrIn: [ :step :rest | 
+					(self primitiveAct: step by: actor from: startS to: nextS rules: theRules) | (self speechAct: step by: actor from: startS to: nextS rules: theRules)
+						& (self hierarchicalPlan: rest actor: actor state: nextS goal: endG rules: theRules) ].
+			done | acting ] ].
 	^ false
 		ifTrue: [ block
 				valueWithArguments:
