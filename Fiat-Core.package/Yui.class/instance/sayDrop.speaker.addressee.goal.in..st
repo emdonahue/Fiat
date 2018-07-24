@@ -1,4 +1,4 @@
-commands
+speaking
 sayDrop: anUtt speaker: theSpeaker addressee: theAddressee goal: aGoal in: aWorld
 	| a b |
 	a := SKVar new.

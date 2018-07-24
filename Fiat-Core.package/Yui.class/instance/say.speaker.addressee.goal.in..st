@@ -1,4 +1,4 @@
-commands
+speaking
 say: anUtterance speaker: theSpeaker addressee: theAddressee goal: aGoal in: aWorld
 	^ (self
 		sayCome: anUtterance
