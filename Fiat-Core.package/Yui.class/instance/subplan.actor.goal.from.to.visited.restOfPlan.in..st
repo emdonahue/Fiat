@@ -1,4 +1,4 @@
-planning-dep
+DEP - planning
 subplan: aPlan actor: anActor goal: aGoal from: startS to: endS visited: visitedStates restOfPlan: restOfPlan in: aWorld
 	"do we need to check that were not done befor econtinuing to plan?"
 

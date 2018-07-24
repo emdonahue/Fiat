@@ -1,5 +1,5 @@
 types
-isItem: anEntity in: aWorld
+isItem: anEntity in: aState
 	^ [ :room_inv | 
 	anEntity =/= #player1 & (anEntity =/= name)
-		& ((aWorld state membero: (#room cons: room_inv cons: anEntity cons)) | (aWorld state membero: (#inventory cons: room_inv cons: anEntity cons))) ] asGoal.
+		& ((aState membero: (#room cons: room_inv cons: anEntity cons)) | (aState membero: (#inventory cons: room_inv cons: anEntity cons))) ] asGoal.

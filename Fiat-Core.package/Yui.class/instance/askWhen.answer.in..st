@@ -1,4 +1,4 @@
-questions
+DEP - questions
 askWhen: aQuestion answer: anAnswer in: aWorld
 	^ aQuestion
 		car: #when

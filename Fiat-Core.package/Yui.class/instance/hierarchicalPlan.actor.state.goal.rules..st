@@ -9,8 +9,9 @@ hierarchicalPlan: planIn actor: anActor state: startState goal: endGoal rules: t
 			done := plan === Cons empty & (self state: startS satisfies: endG).
 			acting := plan
 				carCdrIn: [ :step :rest | 
-					(self answerQuestion: step from: startS to: nextS) |
-					(self primitiveAct: step by: actor from: startS to: nextS rules: theRules) | (self speechAct: step by: actor from: startS to: nextS rules: theRules)
+					(self primitiveAct: step by: actor from: startS to: nextS rules: theRules)
+						| (self speechAct: step by: actor from: startS to: nextS rules: theRules)
+						| (self answerQuestion: step from: startS to: nextS) 
 						& (self hierarchicalPlan: rest actor: actor state: nextS goal: endG rules: theRules) ].
 			done | acting ] ].
 	^ false

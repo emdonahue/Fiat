@@ -1,4 +1,4 @@
-planning-dep
+DEP - planning
 planSpeechAct: aPlan speaker: theSpeaker addressee: theAddressee from: startS to: endS restOfPlan: restOfPlan visited: visitedStates in: aWorld
 	| g subEndS subrest |
 	self deprecated: 'See planning protocol'.

@@ -1,9 +1,9 @@
-planning
+questions
 answerQuestion: aStep from: startS to: nextS
-	| room obj |
+	| obj type |
 	^ startS
 		carCdrIn: [ :worldS :kbS | 
-			room := SKVar tag: #whatRoom.
 			obj := SKVar tag: #whatObj.
-			(worldS membero: (#room cons: room cons: obj cons)) & (aStep === (#say cons: obj cons: #is cons: #item cons))
-				& (kbS nembero: (#type cons: obj cons: #item cons)) & (nextS === (worldS cons: ((#type cons: obj cons: #item cons) cons: kbS))) ].
+			type := SKVar tag: #whatType.
+			(self entity: obj type: type in: worldS) & (aStep === (#say cons: obj cons: #is cons: type cons)) & (kbS nembero: (#type cons: obj cons: type cons))
+				& (nextS === (worldS cons: ((#type cons: obj cons: type cons) cons: kbS))) ].

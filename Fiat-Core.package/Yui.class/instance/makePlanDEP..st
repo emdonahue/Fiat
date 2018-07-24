@@ -1,4 +1,4 @@
-planning-dep
+DEP - planning
 makePlanDEP: aWorld
 	| endS |
 	self deprecated: 'see makePlan'.

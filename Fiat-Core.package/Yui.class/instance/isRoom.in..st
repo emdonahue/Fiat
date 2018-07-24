@@ -1,5 +1,5 @@
 types
-isRoom: anEntity in: aWorld
+isRoom: anEntity in: aState
 	^ [ :thing_room | 
-	(aWorld state membero: (#room cons: anEntity cons: thing_room)) | (aWorld state membero: (#exit cons: anEntity cons: thing_room))
-		| (aWorld state membero: (#exit cons: thing_room cons: anEntity cons)) ] asGoal.
+	(aState membero: (#room cons: anEntity cons: thing_room)) | (aState membero: (#exit cons: anEntity cons: thing_room))
+		| (aState membero: (#exit cons: thing_room cons: anEntity cons)) ] asGoal.
