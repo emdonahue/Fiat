@@ -4,3 +4,5 @@ setUp
 	yui := Yui new
 		name: #yui;
 		kb: #(#(type sword1 item) #(type axe2 item) #(type player1 player) #(type yui player) #(type room1 room) #(type room2 room)) asConsTree.
+		world ai: yui.
+	world initializeAI.

@@ -1,5 +1,5 @@
-questions
-answerQuestion: aStep from: startS to: nextS
+constative
+sayType: aStep from: startS to: nextS
 	| obj type |
 	^ startS
 		carCdrIn: [ :worldS :kbS | 
