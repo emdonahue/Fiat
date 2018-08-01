@@ -1,7 +1,6 @@
-asking
+questions
 testWhere
-	self assert: (yui ask: #(where player1) asCons in: world) equals: #room1.
-	self assert: (yui ask: #(where yui) asCons in: world) equals: #room1.
-	self assert: (yui ask: #(where sword1) asCons in: world) equals: #room1.
-	self assert: (yui ask: #(where nothing) asCons in: world) equals: 'I dont know'.
-	self assert: (yui ask: #(where room1) asCons in: world) equals: #room2.
+	self assert: (yui goalFromUtterance: #(where player1) asCons in: world) equals: (Cons empty cons: (#room cons: #room1 cons: #player1 cons) cons).
+	self assert: ((yui processUtterance: #(where player1) asCons in: world) plan: world) equals: #(#(say player1 in room1)) asConsTree.
+	self assert: ((yui processUtterance: #(where yui) asCons in: world) plan: world) equals: #(#(say yui in room1)) asConsTree.
+	self assert: ((yui processUtterance: #(where sword1) asCons in: world) plan: world) equals: #(#(say sword1 in room1)) asConsTree.
