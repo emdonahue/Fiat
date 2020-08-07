@@ -7,6 +7,7 @@ baseline: spec
 			spec 
 				baseline: 'Cons' with: [ spec repository: 'github://emdonahue/Cons' ];
 				baseline: 'Contracts' with: [ spec repository: 'github://emdonahue/Contracts' ];	
-					baseline: 'CCG' with: [ spec repository: 'github://emdonahue/CCG' ];	
+				baseline: 'SmallKanren' with: [ spec repository: 'github://emdonahue/SmallKanren' ];	
+				baseline: 'CCG' with: [ spec repository: 'github://emdonahue/CCG' ];	
 				package: 'Fiat-Core' with: [ spec requires: #('Cons' 'SmallKanren' 'CCG') ];
 				package: 'Fiat-Tests' with: [ spec requires: #('Fiat-Core' 'SmallKanren' 'Cons' 'Contracts') ] ]
