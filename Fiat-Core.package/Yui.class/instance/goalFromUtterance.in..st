@@ -1,7 +1,7 @@
 listening
 goalFromUtterance: anUtterance in: aWorld
 	| utt a |
-	utt := anUtterance asConsTree.
+	utt := anUtterance asConsR.
 	a := SKVar new.
 	anUtterance = #(nevermind)
 		ifTrue: [ ^ Cons empty cons: Cons empty ].
