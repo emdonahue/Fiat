@@ -1,7 +1,7 @@
 knowledgebase
 testInterpretEvent
-	(Yui new kb: #(
+	((Yui new kb: #(
 		(lexicon catullus N catllus)
-		(lexicon (is a) S\N/N (is-a A B))
+		(lexicon is ((S / N) \ N) is)
 		(lexicon cat N cat)) asConsR)
-	interpretEvent: #(event 1 evan says (catullus is a cat)).
+	interpretEvent: #(event 1 evan says (catullus is cat)) asConsR) inspect.
