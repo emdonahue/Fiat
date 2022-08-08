@@ -9,7 +9,9 @@
 		"goal",
 		"name",
 		"history",
-		"kb"
+		"beliefs",
+		"kb",
+		"timestamp"
 	],
 	"name" : "Yui",
 	"type" : "normal"
