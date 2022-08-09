@@ -1,4 +1,4 @@
-facts
+DEP-facts
 sayType: aStep from: startS to: nextS
 	| obj type |
 	^ startS

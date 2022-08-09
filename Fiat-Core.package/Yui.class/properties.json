@@ -10,8 +10,8 @@
 		"name",
 		"history",
 		"beliefs",
-		"kb",
-		"timestamp"
+		"timestamp",
+		"knowledgebase"
 	],
 	"name" : "Yui",
 	"type" : "normal"

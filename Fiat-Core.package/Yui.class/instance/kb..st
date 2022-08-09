@@ -1,3 +1,3 @@
 accessing
 kb: anObject
-	kb := anObject
+	knowledgebase := anObject

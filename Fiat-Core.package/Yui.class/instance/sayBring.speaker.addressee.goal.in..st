@@ -1,4 +1,4 @@
-commands
+DEP-commands
 sayBring: anUtt speaker: theSpeaker addressee: theAddressee goal: aGoal in: aWorld
 	| a b |
 	a := SKVar new.

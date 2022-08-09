@@ -1,4 +1,4 @@
-facts
+DEP-facts
 sayLocation: aStep from: startS to: nextS
 	| obj room fact |
 	^ startS

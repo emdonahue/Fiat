@@ -1,4 +1,4 @@
-types
+DEP-types
 isItem: anEntity in: aState
 	^ [ :room_inv | 
 	anEntity =/= #player1 & (anEntity =/= name)

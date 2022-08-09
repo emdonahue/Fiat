@@ -1,4 +1,4 @@
-planning
+DEP-planning
 primitiveAct: aStep by: anActor from: startS to: nextS rules: theRules
 	^ startS carCdrIn: [ :worldS :kbS | | nextWorld |
 		nextWorld := SKVar tag: #nextWorld.

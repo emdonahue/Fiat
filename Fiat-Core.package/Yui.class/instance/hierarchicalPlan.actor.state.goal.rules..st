@@ -1,4 +1,4 @@
-planning
+DEP-planning
 hierarchicalPlan: planIn actor: anActor state: startState goal: endGoal rules: theRules
 	| block |
 	block := [ :actor :endG :startS :plan | 

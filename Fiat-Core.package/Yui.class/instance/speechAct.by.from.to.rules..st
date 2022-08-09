@@ -1,4 +1,4 @@
-planning
+DEP-planning
 speechAct: anAction by: anActor from: startS to: endS rules: theRules
 	"currently throws away negative goals from utterance analyzer."
 

@@ -5,5 +5,5 @@ initialize
 	name := #yui.
 	history := Cons empty.
 	beliefs := Cons empty.
-	kb := Cons empty.
+	knowledgebase := Cons empty.
 	timestamp := 0.

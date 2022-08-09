@@ -1,4 +1,4 @@
-listening
+DEP-listening
 hearIn: aQuestion speaker: theSpeaker addressee: theAddressee goal: aGoal in: aWorld
 	| fact |
 	^ aQuestion

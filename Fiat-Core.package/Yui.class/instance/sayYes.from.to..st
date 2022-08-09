@@ -1,4 +1,4 @@
-facts
+DEP-facts
 sayYes: aStep from: startS to: nextS
 	| fact |
 	fact := SKVar tag: #yesFact.

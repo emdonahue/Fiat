@@ -1,4 +1,4 @@
-planning
+DEP-planning
 primitivePlan: planIn actor: anActor state: startState end: endState goal: endGoal rules: theRules
 	| block |
 	block := [ :actor :endG :startS :plan :endS | 

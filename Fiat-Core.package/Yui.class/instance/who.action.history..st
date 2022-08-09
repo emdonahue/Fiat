@@ -1,4 +1,4 @@
-history
+DEP-history
 who: aProposition action: anAction history: aHistory
 	^ aHistory
 		match: #(#(? #'.' ?) #'.' ?)

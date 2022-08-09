@@ -1,4 +1,4 @@
-listening
+DEP-listening
 goalFromUtterance: anUtterance in: aWorld
 	| utt a |
 	utt := anUtterance asConsR.

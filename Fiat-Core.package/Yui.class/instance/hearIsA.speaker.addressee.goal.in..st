@@ -1,4 +1,4 @@
-listening
+DEP-listening
 hearIsA: aQuestion speaker: theSpeaker addressee: theAddressee goal: aGoal in: aWorld
 	^ aQuestion
 		match: #(is ? a ?)

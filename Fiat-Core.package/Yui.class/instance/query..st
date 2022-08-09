@@ -1,3 +1,3 @@
 knowledgebase
 query: aTuple
-	^ kb membero: aTuple.
+	^ knowledgebase membero: aTuple.
