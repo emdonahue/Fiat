@@ -1,3 +1,3 @@
 accessing
-kb: anObject
+knowledgebase: anObject
 	knowledgebase := anObject

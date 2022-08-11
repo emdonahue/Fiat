@@ -1,3 +1,3 @@
 accessing
-kb
+knowledgebase
 	^ knowledgebase

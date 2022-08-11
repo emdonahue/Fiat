@@ -5,4 +5,4 @@ processUtterance: anUtterance in: aWorld
 	newGoal := myself goalFromUtterance: anUtterance in: aWorld.
 	^ myself copy
 		goal: newGoal;
-		kb: (newGoal cdr inject: beliefs into: [ :k :g | k remove: g ]).
+		knowledgebase: (newGoal cdr inject: beliefs into: [ :k :g | k remove: g ]).
