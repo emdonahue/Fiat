@@ -11,7 +11,8 @@
 		"history",
 		"beliefs",
 		"timestamp",
-		"knowledgebase"
+		"knowledgebase",
+		"model"
 	],
 	"name" : "Yui",
 	"type" : "normal"
