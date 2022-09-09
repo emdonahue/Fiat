@@ -1,3 +1,3 @@
 tests
 testPlanNothing
-	self assert: (yui makePlan: world) run first equals: Cons empty cons.
+	self assert: (yui makePlan: world) runList first equals: Cons empty cons.

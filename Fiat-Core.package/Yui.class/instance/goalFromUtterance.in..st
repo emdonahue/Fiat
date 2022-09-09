@@ -6,4 +6,4 @@ goalFromUtterance: anUtterance in: aWorld
 	anUtterance = #(nevermind)
 		ifTrue: [ ^ Cons empty cons: Cons empty ].
 	^ [ :g | (self say: utt speaker: #player1 addressee: name goal: g in: aWorld) | (self hearQuestion: utt speaker: #player1 addressee: name goal: g in: aWorld) ]
-		asGoal run ifEmpty: [ goal ] ifNotEmpty: [ :gs | gs car car ].
+		asGoal runList ifEmpty: [ goal ] ifNotEmpty: [ :gs | gs car car ].

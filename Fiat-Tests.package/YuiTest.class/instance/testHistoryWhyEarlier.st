@@ -5,5 +5,5 @@ testHistoryWhyEarlier
 	self
 		assert:
 			[ :action | yui why: #(inventory yui sword1) asCons action: action history: ((#(yui say get sword) asCons cons: w) cons: (#(yui get sword1) asCons cons: w) cons: (#initialState cons: world state) cons) ]
-				asGoal run first first
+				asGoal runList first first
 		equals: #(yui get sword1) asCons.

@@ -1,6 +1,6 @@
 accessing structure variables
 act: anAction
-	^ [ :nxt | self step: anAction from: state to: nxt ] asGoal run
+	^ [ :nxt | self step: anAction from: state to: nxt ] asGoal runList
 		ifEmpty: [ FIAUpdate new
 				world: self;
 				actions: 'What you expected, hasnt happened' ]
